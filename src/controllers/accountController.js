@@ -1,0 +1,1 @@
+const bll=require('../bll/accountBLL');exports.getAccount=async(req,res)=>{try{res.json(await bll.getAccount(req.user.id));}catch(e){res.status(500).json({message:e.message});}};exports.getTransactions=async(req,res)=>{try{res.json(await bll.getTransactions(req.user.id));}catch(e){res.status(500).json({message:e.message});}};
